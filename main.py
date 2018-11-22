@@ -77,6 +77,10 @@ def process_csv(args):
         # remove ut-8 bon sig
         csvfile.seek(skip_utf8_seek)
         csv_reader=csv.DictReader(csvfile)
+        #create directory if it doesn't exist
+        if not os.path.exists(args.outputdir):
+            os.makedirs(args.outputdir)
+
         for row in csv_reader:
             try:
                 process_row(args.assetdir,args.outputdir,args.prefix,row)

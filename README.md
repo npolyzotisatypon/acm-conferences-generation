@@ -13,3 +13,14 @@ Requires python2.7
 ```
 
 Default export is to `output`
+
+## Docker 
+
+You can also run it through Docker 
+Just create a local directory with the name `output`
+
+```shell
+> mkdir output
+> docker build -t acm-conferences-generation .
+> docker run -it --rm --name generate-do -v `pwd`/output:/generation/output acm-conferences-generation
+```
