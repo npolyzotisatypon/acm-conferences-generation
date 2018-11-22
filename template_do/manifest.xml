@@ -1,0 +1,6 @@
+<!DOCTYPE submission PUBLIC "-//Atypon//DTD Literatum Content Submission Manifest DTD v4.2 20140519//EN" "manifest.4.2.dtd">
+<submission dtd-version="4.2" group-doi="10.1145/conference-do-group" submission-type="full">
+    <processing-instructions>
+        <make-live on-condition="no-fatals"/>
+    </processing-instructions>
+</submission>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets xmlns="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" TYPE="conference-do">
+  <mets:dmdSec xmlns:mets="http://www.loc.gov/METS/" ID="DMD">
+    <mets:mdWrap MDTYPE="MODS">
+      <mets:xmlData>
+        <mods xmlns="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods.xsd">
+          <mods:identifier xmlns:mods="http://www.loc.gov/mods/v3" type="doi">{{ doi }}</mods:identifier>
+          <mods:titleInfo xmlns:mods="http://www.loc.gov/mods/v3" ID="title">
+            <mods:title>{{ title }}</mods:title>
+          </mods:titleInfo>
+          <mods:abstract xmlns:mods="http://www.loc.gov/mods/v3">{{ description }}</mods:abstract>
+          <mods:subject xmlns:mods="http://www.loc.gov/mods/v3" authority="conference-collections" ID="conferenceCollections">
+            <mods:topic authority="{{ topic }}"></mods:topic>
+          </mods:subject>
+          <mods:extension xmlns:mods="http://www.loc.gov/mods/v3">
+            <atpn:do-extensions xmlns:atpn="http://www.atypon.com/digital-objects" xsi:schemaLocation="http://www.atypon.com/digital-objects http://www.atypon.com/digital-objects/digital-objects.xsd">
+              <atpn:subTitle>{{ topic }}</atpn:subTitle>
+              <atpn:conferenceURL>{{ conference_url }}</atpn:conferenceURL>
+              <atpn:conferenceLogo>{{ image_filename }}</atpn:conferenceLogo>
+              <atpn:conferenceCode>{{ legacy_event_id }}</atpn:conferenceCode>
+              <atpn:baseDoi>10.1145/conference-do-class</atpn:baseDoi>
+            </atpn:do-extensions>
+          </mods:extension>
+        </mods>
+      </mets:xmlData>
+    </mets:mdWrap>
+  </mets:dmdSec>
+  <mets:fileSec xmlns:mets="http://www.loc.gov/METS/">
+    <mets:fileGrp ID="conferenceLogo-group">
+      <mets:file ID="conferenceLogo-logo.jpg">
+        <mets:FLocat LOCTYPE="URL" xlink:href="file://{{ image_filename }}"></mets:FLocat>
+      </mets:file>
+    </mets:fileGrp>
+  </mets:fileSec>
+  <mets:structMap xmlns:mets="http://www.loc.gov/METS/">
+    <mets:div></mets:div>
+  </mets:structMap>
+</mets>
+

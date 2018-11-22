@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mets xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.loc.gov/METS/" xsi:schemaLocation="http://www.loc.gov/METS/ http://www.loc.gov/standards/mets/mets.xsd" TYPE="PT_STORY">
+  <dmdSec ID="DMD">
+    <mdWrap MDTYPE="MODS">
+      <xmlData>
+        <mods xmlns="http://www.loc.gov/mods/v3" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods.xsd">
+                </mods>
+      </xmlData>
+    </mdWrap>
+  </dmdSec>
+  <fileSec>
+    <fileGrp ID="template-group">
+      <file ID="abs.hbs">
+        <FLocat LOCTYPE="URL" xlink:href="file://abs.hbs"/>
+      </file>
+      <file ID="listitem.hbs">
+        <FLocat LOCTYPE="URL" xlink:href="file://listitem.hbs"/>
+      </file>
+      <file ID="tile.hbs">
+        <FLocat LOCTYPE="URL" xlink:href="file://tile.hbs"/>
+      </file>
+    </fileGrp>
+  </fileSec>
+  <structMap>
+    <div>
+      <div ID="abs">
+        <div ID="abs-template" TYPE="inline-template">
+          <fptr FILEID="abs.hbs"/>
+        </div>
+        <div ID="abs-assets">
+          <fptr FILEID="{{ image_name }}"/>
+        </div>
+      </div>
+      <div ID="listitem">
+        <div ID="listitem-template" TYPE="inline-template">
+          <fptr FILEID="listitem.hbs"/>
+        </div>
+        <div ID="listitem-assets">
+          <fptr FILEID="{{ image_name }}"/>
+        </div>
+      </div>
+      <div ID="tile">
+        <div ID="tile-template" TYPE="inline-template">
+          <fptr FILEID="tile.hbs"/>
+        </div>
+         <div ID="tile-assets">
+          <fptr FILEID="{{ image_name }}"/>
+        </div>
+      </div>
+    </div>
+  </structMap>
+</mets>
