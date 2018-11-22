@@ -24,3 +24,13 @@ Just create a local directory with the name `output`
 > docker build -t acm-conferences-generation .
 > docker run -it --rm --name generate-do -v `pwd`/output:/generation/output acm-conferences-generation
 ```
+
+# Collect CSV data
+
+Install chrome plugin Web Scraper
+https://chrome.google.com/webstore/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn
+
+Create a new sitemap  by importing  [sitemapper.json](/npolyzotisatypon/acm-conferences-generation/blob/master/sitemapper.json)
+
+Run sitemap generation and export data
+You then have to download the images with new filenames (TBC)
