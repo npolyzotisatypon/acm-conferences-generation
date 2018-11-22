@@ -30,7 +30,7 @@ Just create a local directory with the name `output`
 Install chrome plugin Web Scraper
 https://chrome.google.com/webstore/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn
 
-Create a new sitemap  by importing  [sitemapper.json](/npolyzotisatypon/acm-conferences-generation/blob/master/sitemapper.json)
+Create a new sitemap  by importing  [sitemapper.json](/blob/master/sitemapper.json)
 
 Run sitemap generation and export data
 You then have to download the images with new filenames (TBC)
